@@ -4,68 +4,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAPOR RT - Kelurahan Pelita</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login LAPOR RT - Kelurahan Pelita</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #F3F5F9;
+            display: flex;
+            flex-direction: column;
+            color: #142D55;
+        }
+
+        header {
+            background: #142D55;
+            color: white;
+            padding: 22px 7%;
+            border-bottom: 4px solid #F5B51B;
+        }
+
+        header h2 {
+            font-size: 25px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin-top: 5px;
+            color: #E5EAF2;
+            font-size: 14px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 420px;
+            background: white;
+            padding: 38px;
+            border-radius: 14px;
+            box-shadow: 0 8px 30px rgba(20, 45, 85, 0.09);
+        }
+
+        .login-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .login-heading h1 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .login-heading p {
+            color: #6B7280;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #D5DAE3;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #142D55;
+            box-shadow: 0 0 0 3px rgba(20, 45, 85, 0.08);
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #142D55;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #203F70;
+        }
+
+        .login-note {
+            margin-top: 22px;
+            text-align: center;
+            color: #7B8493;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            color: #7B8493;
+            font-size: 12px;
+        }
+
+        @media (max-width: 480px) {
+            .login-card {
+                padding: 28px 22px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <header>
         <h2>LAPOR RT</h2>
-        <p>Kelurahan Pelita</p>
+        <p>Kelurahan Pelita · Kecamatan Samarinda Ilir</p>
     </header>
 
-    <main class="container">
-        <section class="welcome">
-            <h1>Selamat Datang!</h1>
-            <p>Sistem Laporan Bulanan RT Kelurahan Pelita</p>
-        </section>
+    <main>
+        <section class="login-card">
 
-        <section class="dashboard">
-            <div class="card">
-                <h3>46</h3>
-                <p>Total RT</p>
+            <div class="login-heading">
+                <h1>Selamat Datang!</h1>
+                <p>
+                    Sistem Informasi Laporan Bulanan RT
+                    Kelurahan Pelita
+                </p>
             </div>
 
-            <div class="card">
-                <h3>0</h3>
-                <p>Sudah Melapor</p>
+            <form id="formLogin">
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Masukkan username"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Masukkan password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Masuk</button>
+
+            </form>
+
+            <div class="login-note">
+                Akun login diberikan oleh Admin Kelurahan Pelita.
+                <br>
+                Jika mengalami kendala, silakan hubungi Admin.
             </div>
 
-            <div class="card">
-                <h3>46</h3>
-                <p>Belum Melapor</p>
-            </div>
-        </section>
-
-        <section class="menu">
-            <h2>Menu Utama</h2>
-
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <h3>📝 Buat Laporan</h3>
-                    <p>Isi laporan bulanan RT</p>
-                </div>
-
-                <div class="menu-item">
-                    <h3>📋 Riwayat Laporan</h3>
-                    <p>Lihat laporan sebelumnya</p>
-                </div>
-
-                <div class="menu-item">
-                    <h3>👤 Profil RT</h3>
-                    <p>Informasi RT</p>
-                </div>
-
-                <div class="menu-item">
-                    <h3>ℹ️ Panduan</h3>
-                    <p>Cara menggunakan aplikasi</p>
-                </div>
-            </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 LAPOR RT - Kelurahan Pelita</p>
+        © 2026 LAPOR RT - Kelurahan Pelita
     </footer>
 
 </body>
